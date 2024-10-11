@@ -1,0 +1,16 @@
+import string
+f = open('1312.txt', 'rt', encoding='UTF-8')
+x=f.readlines()
+f.close()
+l =[]
+with open('1312.txt', encoding='utf-8') as f:
+    for line in f:
+        for i in line.split():
+            l.append(i.strip(string.punctuation))
+print(l)
+Q=input("Введите фамилию:     ")
+for u in l:
+ if Q == u:
+    print(Q, "Найдено")
+ else:
+    print("Не найдено")
